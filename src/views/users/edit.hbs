@@ -1,0 +1,47 @@
+<div class="container p-3">
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+                <p class="m-2 text-center">Actualiza tus datos para poder mandar los datos al Licenciado</p>
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title text-center">Datos requeridos:</h4>
+                </div>
+                <div class="card-body">
+                    <form action="/users/edit/{{user._id}}" method="post">
+                        <div class="form-group">
+                            <span>Apellido paterno: *</span>
+                            <input type="text" class="form-control" name="last_name" placeholder="Mamani" value="{{user.last_name}}" autofocus required >
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <span>Apellido materno: *</span>
+                            <input type="text" class="form-control" name="last_name_mother" placeholder="Guitierres" value="{{user.last_name_mother}}" required>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <span>Nombre(s): *</span>
+                            <input type="text" class="form-control" name="names" placeholder="Juan Carlos" value="{{user.names}}" required>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <span>Número de carnet de identidad: *</span>
+                            <input type="number" class="form-control" name="ci" placeholder="99377626" value="{{user.ci}}" required>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <span>Número de registro universitario: *</span>
+                            <input type="number" class="form-control" name="re_uni" placeholder="1243443" value="{{user.re_uni}}" required>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <span>Número de celular registrado en el grupo oficial de whatsapp: *</span>
+                            <input type="number" class="form-control" name="cel" placeholder="76877300" value="{{user.cel}}" required>
+                        </div>
+                        <br>
+                        <button class="w-100 btn btn-success" name=""type="submit">enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+<div class="container p-4">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        {{#each users}}
+            <div class="col">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <a href="#">
+                            <h5 class="card-title text-uppercase">{{names}}</h5>
+                        </a>
+                        <span class="m-1">{{last_name}}</span>
+                        <span class="m-1">{{last_name_mother}}</span>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <p class="m-2"><b>CI:</b></p>
+                            <p class="m-2">{{ci}}</p>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <p class="m-2"><b>RU:</b></p>
+                            <p class="m-2">{{re_uni}}</p>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <p class="m-2"><b>celular:</b></p>
+                            <p class="m-2">{{cel}}</p>
+                        </div>
+                        <p>{{timeago created_at}}</p>
+                        <a href="/users/delete/{{_id}}" class="btn btn-danger">Delete Link</a>
+                        <a href="/users/edit/{{_id}}" class="btn btn-secondary">Edit</a>
+                    </div>
+                </div>
+            </div>
+        {{ else }}
+            <div class="col-md-4 mx-auto">
+                <div class="card card-body text-center">
+                    <p>There are not links saved yet.</p>
+                    <a href="links/add">Create a new link</a>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>
