@@ -1,5 +1,0 @@
-[build]
-  functions = "./src"
-
-[dev]
-  publish = "src/public"
